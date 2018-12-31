@@ -1,13 +1,17 @@
 import React from "react";
 
-function NameAndAddress({ name, email }) {
-  return (
-    <div className="nameAndAddress">
-      <p>Nimi: {name}</p>
-      <p>Sähköposti: {email}</p>
-      <a href="https://www.linkedin.com/in/tiina-partanen-2078852/">LinkedIn</a>
-    </div>
-  );
+function NameAndAddress({ name, email, show, link }) {
+  if (show) {
+    return (
+      <div className="nameAndAddress">
+        <p>Nimi: {name}</p>
+        <p>Sähköposti: {email}</p>
+        <a href={link}>LinkedIn</a>
+      </div>
+    );
+  } else {
+    return <div />;
+  }
 }
 
 export default NameAndAddress;
