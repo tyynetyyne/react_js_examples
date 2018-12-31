@@ -1,6 +1,6 @@
 import React from "react";
 
-function ToggleButton({ show, clickHandler }) {
+function ToggleButton({ show, clickHandler, buttonNumber }) {
   let text = "";
   if (!show) {
     text = "Näytä";
@@ -8,9 +8,9 @@ function ToggleButton({ show, clickHandler }) {
     text = "Piilota";
   }
   return (
-    <button class="toggleButton" onClick={clickHandler}>
-      {text}
-    </button>
+    <div class="toggleButton">
+      <button onClick={e => clickHandler(buttonNumber)}>{text}</button>
+    </div>
   );
 }
 
