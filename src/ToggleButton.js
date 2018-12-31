@@ -1,11 +1,17 @@
 import React from "react";
 
-function ToggleButton(show) {
-  if (show) {
-    return <button class="toggleButton">Piilota</button>;
+function ToggleButton({ show, clickHandler, buttonNumber }) {
+  let text = "";
+  if (!show) {
+    text = "Näytä";
   } else {
-    return <button class="toggleButton">Näytä</button>;
+    text = "Piilota";
   }
+  return (
+    <div class="toggleButton">
+      <button onClick={e => clickHandler(buttonNumber)}>{text}</button>
+    </div>
+  );
 }
 
 export default ToggleButton;
