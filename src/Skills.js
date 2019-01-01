@@ -2,9 +2,9 @@ import React from "react";
 
 function Skill({ skill }) {
   return (
-    <div className="item" key={skill.id}>
-      <div className="listItem">{skill.name} </div>
-    </div>
+    <div className="item">
+      <div className="listItem">{skill.name}</div>
+   </div>
   );
 }
 
@@ -37,7 +37,7 @@ function Skills({ skills, show, submitHandler, changeHandler, newSkill }) {
             newSkill={newSkill}
           />
           {skills.map(skill => (
-            <Skill skill={skill} />
+            <Skill skill={skill} key={skill.id} />
           ))}
         </div>
       </div>

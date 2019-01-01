@@ -14,8 +14,18 @@ class App extends React.Component {
       link: "https://www.linkedin.com/in/tiina-partanen-2078852/",
       show: [true, true, true], // jokaiselle harjoitukselle omansa
       courses: [
-        { name: "JavaScript", instructor: "Tiina Partanen", location: "K240" },
-        { name: "Java", instructor: "Eerikki Maula", location: "K241" }
+        {
+          name: "JavaScript",
+          instructor: "Tiina Partanen",
+          location: "K240",
+          id: 0
+        },
+        {
+          name: "Java",
+          instructor: "Eerikki Maula",
+          location: "K241",
+          id: 1
+        }
       ],
       skills: [
         {

@@ -17,13 +17,15 @@ function Courses({ courses, show }) {
       <div className="courses">
         <table>
           <thead>
-            <th>Kurssi</th>
-            <th>Opettaja</th>
-            <th>Luokka</th>
+            <tr>
+              <th>Kurssi</th>
+              <th>Opettaja</th>
+              <th>Luokka</th>
+            </tr>
           </thead>
           <tbody>
             {courses.map(course => (
-              <Course course={course} />
+              <Course course={course} key={course.id} />
             ))}
           </tbody>
         </table>
