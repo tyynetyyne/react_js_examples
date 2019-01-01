@@ -4,7 +4,7 @@ function Skill({ skill }) {
   return (
     <div className="item">
       <div className="listItem">{skill.name}</div>
-    </div>
+   </div>
   );
 }
 
