@@ -8,7 +8,7 @@ function ToggleButton({ show, clickHandler, buttonNumber }) {
     text = "Piilota";
   }
   return (
-    <div class="toggleButton">
+    <div className="toggleButton">
       <button onClick={e => clickHandler(buttonNumber)}>{text}</button>
     </div>
   );
